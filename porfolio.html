@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyectos Principales</title>
     <style>
         body {
@@ -16,17 +17,54 @@
             min-height: 100vh;
             text-shadow: 0 0 5px #505050;
 
-            background: 
-                repeating-linear-gradient(
-                    0deg,
+            background:
+                repeating-linear-gradient(0deg,
                     rgba(0, 255, 0, 0.05),
                     rgba(0, 255, 0, 0.05) 2px,
                     transparent 2px,
-                    transparent 4px
-                ),
+                    transparent 4px),
                 #150015;
             background-attachment: fixed;
+            padding-top: 60px;
+
         }
+
+        .barraNavegacion {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.95);
+            border-bottom: 2px solid #072c00;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .barraNavegacion nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .barraNavegacion a {
+            color: #5ae3bc;
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .barraNavegacion a:hover {
+            color: #82d2be;
+            text-shadow: 0 0 5px #5ae3bc;
+        }
+
+
+
 
         .contenedorPrincipal {
             background: #111;
@@ -41,6 +79,10 @@
             font-size: 1.4rem;
             text-align: center;
             color: #cdd3cd;
+        }
+
+        .titulo{
+            text-align: center;
         }
 
         .subtitulo {
@@ -134,12 +176,22 @@
         }
     </style>
 </head>
+
 <body>
+
     <main class="contenedorPrincipal">
-        <header>
-            <h1>PROYECTOS PRINCIPALES</h1>
-            <p class="subtitulo">Ángela Faundez - Programadora & Artista Digital</p>
+        <header class="barraNavegacion">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="porfolio.html">Proyectos</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
         </header>
+
+        <section>
+            <h1 class="titulo">PROYECTOS PRINCIPALES</h1>
+            <p class="subtitulo">Ángela Faundez - Programadora & Artista Digital</p>
+        </section>
         <!--
         <nav class="menu">
             <a href="">Todo</a>
@@ -179,4 +231,5 @@
         </footer>
     </main>
 </body>
+
 </html>
