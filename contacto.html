@@ -19,15 +19,49 @@
       min-height: 100vh;
       text-shadow: 0 0 5px #082503;
 
-      background-image: repeating-linear-gradient(
-                0deg,
-                rgba(0, 255, 0, 0.05),
-                rgba(0, 255, 0, 0.05) 2px,
-                transparent 2px,
-                transparent 4px
-            );
-
+      background-image: repeating-linear-gradient(0deg,
+          rgba(0, 255, 0, 0.05),
+          rgba(0, 255, 0, 0.05) 2px,
+          transparent 2px,
+          transparent 4px);
+      padding-top: 60px;
     }
+
+
+    .barraNavegacion {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(17, 17, 17, 0.95);
+      border-bottom: 2px solid #072c00;
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    .barraNavegacion nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .barraNavegacion a {
+      color: #5ae3bc;
+      text-decoration: none;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+
+    .barraNavegacion a:hover {
+      color: #82d2be;
+      text-shadow: 0 0 5px #5ae3bc;
+    }
+
 
     #contacto {
       text-align: center;
@@ -48,36 +82,43 @@
     }
 
     .zonaContactame img {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
 
     img.logoImg {
-      border-radius: 10ch;
+      border-radius: 15ch;
     }
   </style>
 </head>
 
 <body>
-  
-  <!--con navegador por pantallas?-->
-  <header></header>
-  
+
+  <header class="barraNavegacion">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="porfolio.html">Proyectos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
   <article id="contacto">
     <h1>Contacto</h1>
     <hr />
-    <footer class="zonaContactame">
+    <section class="zonaContactame">
       <div>
         <img src="images/iconoCorreo.png" alt="Correo" class="logoImg" />
         <p>faundezroku@gmail.com</p>
       </div>
 
       <div>
-        <img src="images/iconoUbicacion.png" alt="Ubicación" class="logoImg"/>
+        <img src="images/iconoUbicacion.png" alt="Ubicación" class="logoImg" />
         <p>Madrid, España</p>
       </div>
-    </footer>
+    </section>
   </article>
+
+  <footer></footer>
 
 </body>
 
